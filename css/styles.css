@@ -59,12 +59,13 @@ body {
 }
 .header-navigation {
   display: flex;
-
 }
+
 .logo {
   width: 115px;
 height: 24px;
-padding: 24px 76px 24px 141px;
+padding-top: 24px;
+padding-bottom: 24px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -80,8 +81,15 @@ padding: 24px 76px 24px 141px;
 .navigation-link {
   display: flex;
   list-style: none;
+  gap: 40px;
+  padding-left: 76px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  
 }
 .header-list {
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
@@ -101,6 +109,10 @@ padding: 24px 76px 24px 141px;
 .contacts-link {
   display: flex;
   list-style: none;
+  gap: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-left: auto;
 }
 .header-contacts {
   text-decoration: none;
@@ -120,16 +132,31 @@ padding: 24px 76px 24px 141px;
 
 /* MAIN SECTION */
 .hero {
-  background-color: var(--accent-color);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+
+background-color: var(--accent-color);
+
+height: 600px;
 }
 .hero-title {
+  width: 496px;
+height: 120px;
+margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
+  text-align: center;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--nav-background-color);
+
 }
 .hero-button {
+  border: 0px;
+  display: inline-block;
+  padding: 16px 32px;
   background: var(--accent-text-color);
   font-family: inherit;
   font-weight: 700;
@@ -138,9 +165,13 @@ padding: 24px 76px 24px 141px;
   letter-spacing: 0.04em;
   color: var(--nav-background-color);
   cursor: pointer;
+  border-radius: 4px;
 }
 .hero-button:hover,
 .hero-button:focus {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 0px;
   background: var(--enable-btn-color);
   font-family: inherit;
   font-weight: 700;
@@ -149,13 +180,24 @@ padding: 24px 76px 24px 141px;
   letter-spacing: 0.04em;
   color: var(--nav-background-color);
   cursor: pointer;
+  border-radius: 4px;
 }
 .advantages-list {
+  display: flex;
   list-style: none;
+
 }
 .advantages-item {
+  width: 264px;
+  height: 72px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.advantages-list .advantages-item + .advantages-item{
+  margin-left: 24px;
 }
 .advantages-title {
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
