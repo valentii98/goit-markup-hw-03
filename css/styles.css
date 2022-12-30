@@ -9,6 +9,19 @@
   --secondary-background-color: #f4f4fd;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 p,
 h1,
 h2,
@@ -25,23 +38,12 @@ ol {
 }
 
 .container {
-  display: flex;
   width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
+  outline: 1px solid red;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 .list {
   list-style: none;
 }
@@ -52,10 +54,14 @@ body {
   color: var(--main-text-color);
 }
 /* HEADER */
+
 .header {
   background-color: var(--nav-background-color);
-  width: 1440px;
-  height: 71px;
+  padding: 24px 0px;
+}
+
+.header-item {
+  display: flex;
 }
 .header-navigation {
   display: flex;
@@ -63,9 +69,7 @@ body {
 
 .logo {
   width: 115px;
-height: 24px;
-padding-top: 24px;
-padding-bottom: 24px;
+  height: 24px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -83,13 +87,8 @@ padding-bottom: 24px;
   list-style: none;
   gap: 40px;
   padding-left: 76px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  
 }
 .header-list {
-  padding-top: 24px;
-  padding-bottom: 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
@@ -110,8 +109,6 @@ padding-bottom: 24px;
   display: flex;
   list-style: none;
   gap: 40px;
-  padding-top: 24px;
-  padding-bottom: 24px;
   margin-left: auto;
 }
 .header-contacts {
@@ -132,28 +129,21 @@ padding-bottom: 24px;
 
 /* MAIN SECTION */
 .hero {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
-
-background-color: var(--accent-color);
-
-height: 600px;
+  text-align: center;
+  background-color: var(--accent-color);
+  padding: 188px 0px;
 }
 .hero-title {
-  width: 496px;
-height: 120px;
-margin-bottom: 48px;
+  max-width: 496px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 56px;
-  text-align: center;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: var(--nav-background-color);
-
 }
 .hero-button {
+  margin-top: 48px;
   border: 0px;
   display: inline-block;
   padding: 16px 32px;
@@ -185,15 +175,15 @@ margin-bottom: 48px;
 .advantages-list {
   display: flex;
   list-style: none;
-
 }
 .advantages-item {
+  padding-bottom: 120px;
   width: 264px;
   height: 72px;
   margin-top: 120px;
   margin-bottom: 120px;
 }
-.advantages-list .advantages-item + .advantages-item{
+.advantages-list .advantages-item + .advantages-item {
   margin-left: 24px;
 }
 .advantages-title {
@@ -210,6 +200,7 @@ margin-bottom: 48px;
   letter-spacing: 0.02em;
 }
 .title {
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -217,11 +208,29 @@ margin-bottom: 48px;
   text-transform: capitalize;
   color: var(--accent-color);
 }
+.list {
+  display: flex;
+}
+.image {
+  margin-top: 72px;
+  margin-bottom: 120px;
+}
+.list .image + .image {
+  margin-left: 24px;
+}
 .team-section {
   background-color: var(--secondary-background-color);
+  padding: 120px 0px;
+}
+.team-list {
+  margin-top: 72px;
+  gap: 24px;
 }
 .personal-card {
   background-color: var(--nav-background-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 .name {
   font-weight: 700;
@@ -231,15 +240,20 @@ margin-bottom: 48px;
   color: var(--accent-color);
 }
 .position {
+  margin-top: 8px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-
+.personal-info{
+  text-align: center;
+  padding: 32px 0px;
+}
 /* FOOTER */
 
 .footer {
   background-color: var(--accent-color);
+  padding: 100px 0px;
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -252,6 +266,8 @@ margin-bottom: 48px;
   color: var(--secondary-background-color);
 }
 .footer-text {
+  margin-top: 16px;
+  max-width: 264px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
